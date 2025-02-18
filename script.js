@@ -3,12 +3,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelector(".nav-links");
 
     hamburger.addEventListener("click", function () {
-        navLinks.style.display = navLinks.style.display === "flex" ? "none" : "flex";
+        navLinks.classList.toggle("active");
     });
 
     let index = 0;
     const slides = document.querySelectorAll(".hero-slide img");
-    
+
     function changeSlide() {
         slides.forEach((slide, i) => {
             slide.style.display = i === index ? "block" : "none";
