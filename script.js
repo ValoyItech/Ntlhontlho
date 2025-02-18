@@ -19,3 +19,17 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(changeSlide, 3000);
     changeSlide();
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 120
+    });
+
+    // Rest of your existing script.js code
+    const hamburger = document.querySelector(".hamburger");
+    // ... keep existing JS code ...
+});
