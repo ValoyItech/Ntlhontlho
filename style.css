@@ -1094,4 +1094,34 @@ header {
     }
 }
   
+/* Contact Us Section - Mobile Optimization */
+@media (max-width: 768px) {
+    #contact-us {
+        padding: 40px 5%; /* Reduce padding for smaller screens */
+    }
 
+    #contact-us .container {
+        flex-direction: column; /* Stack elements vertically */
+        padding: 20px; /* Reduce padding */
+    }
+
+    .contact-left, .contact-right {
+        width: 100%; /* Full width for both sections */
+        padding: 10px; /* Reduce padding */
+        text-align: center; /* Center align text */
+    }
+
+    .contact-left p {
+        font-size: 16px; /* Slightly reduce font size for better fit */
+        flex-direction: column; /* Stack icon and text vertically */
+        align-items: center; /* Center align items */
+        gap: 5px; /* Reduce gap between icon and text */
+    }
+
+    .contact-left p img {
+        width: 18px; /* Slightly reduce icon size */
+        height: 18px;
+    }
+
+    .separator {
+        margin: 15px 
