@@ -154,122 +154,87 @@
 
 
 
-    <section id="contact">
+    <section id="contact-us" data-aos="fade-up">
+        <div class="container">
+            <div class="contact-left" data-aos="fade-left">
+                <h2>Contact Us</h2>
+                <p><img src="images/Email.png" alt="Email Icon"> ntlhontlho1@gmail.com</p>
+                <p><img src="images/Call.png" alt="Call Icon"> 083 319 0714 | 078 033 3934</p>
+                <p><img src="images/m4.png" alt="Website Icon"> https://www.ntlhontlhosecurity.co.za/</p>
+               
 
-        <h2>Contact Us</h2>
+                <hr class="separator">
 
-        <div class="contact-container">
-
-            <!-- Left Side: Contact Details -->
-
-            <!-- Left Side: Contact Details -->
-
-<div class="contact-details">
-
-    <p>
-
-        <img src="images/Address.png" alt="Address Icon">
-
-        <strong>Address:</strong><br>
-
-        Office No 103,105 & 106<br>
-
-        Old Mutual Building<br>
-
-        Along Giyani Main road<br>
-
-        Opposite Oasis Lodge<br>
-
-        Giyani, South Africa
-
-    </p>
-
-    <p>
-
-        <img src="images/Call.png" alt="Call Icon">
-
-        <strong>Phone:</strong><br>
-
-        083 319 0714<br>
-
-        078 033 3934
-
-    </p>
-
-    <p><strong>Social Media:</strong></p>
-
-    <div class="social-links">
-
-        <a href="https://wa.me/27833190714" target="_blank">
-
-            <img src="images/whatsapp.png" alt="WhatsApp">
-
-        </a>
-
-        <a href="https://www.facebook.com/ntlhontlho/" target="_blank">
-
-            <img src="images/FB.png" alt="Facebook">
-
-        </a>
-
-    </div>
-
-</div>
-
-
-
-    
-
-            <!-- Right Side: Contact Form -->
-
-            <div class="contact-right" data-aos="fade-right">
-
-                <h2>Send Us a Message</h2>
-
-  <form id="contact-form">
-
-      <div class="form-group" data-aos="fade-up">
-
-          <label for="full_name">Full Name:</label>
-
-          <input type="text" id="full_name" name="full_name" required>
-
-      </div>
-
-      <div class="form-group" data-aos="fade-up">
-
-          <label for="phone_number">Phone Number:</label>
-
-          <input type="text" id="phone_number" name="phone_number" required>
-
-      </div>
-
-      <div class="form-group" data-aos="fade-up">
-
-          <label for="email_address">Email Address:</label>
-
-          <input type="email" id="email_address" name="email_address" required>
-
-      </div>
-
-      <div class="form-group" data-aos="fade-up">
-
-          <label for="message">Message:</label>
-
-          <textarea id="message" name="message" required></textarea>
-
-      </div>
-
-      
-
-      <button type="submit" data-aos="zoom-in">Send Message</button>
-
-  </form>
-
+                <div class="social-media">
+                    <h3>Follow Us</h3>
+                    <p style="display: flex; align-items: start;">
+                        <img src="images/Address.png" alt="Address Icon" style="margin-right: 10px;">
+                        <span>
+                            Office No 103,105 & 106 Old Mutual Building<br>
+                            Along Giyani Main Road<br>
+                            Opposite Oasis Lodge<br>
+                            Giyani, South Africa
+                        </span>
+                    </p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/ntlhontlho/" class="social-icon" data-aos="zoom-in">
+                            <img src="images/FB.png" alt="LinkedIn Icon">
+                        </a>
+                        <a href="https://wa.me/27833190714" class="social-icon" data-aos="zoom-in">
+                            <img src="images/whatsapp.png" alt="TikTok Icon">
+                        </a>
+                        
+                    </div>
+                </div>
             </div>
 
-        </div>
+            <div class="contact-right" data-aos="fade-right">
+                <h2>Send Us a Message</h2>
+<form id="contact-form">
+    <div class="form-group" data-aos="fade-up">
+        <label for="full_name">Full Name:</label>
+        <input type="text" id="full_name" name="full_name" required>
+    </div>
+    <div class="form-group" data-aos="fade-up">
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" id="phone_number" name="phone_number" required>
+    </div>
+    <div class="form-group" data-aos="fade-up">
+        <label for="email_address">Email Address:</label>
+        <input type="email" id="email_address" name="email_address" required>
+    </div>
+    <div class="form-group" data-aos="fade-up">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+    </div>
+    
+    <button type="submit" data-aos="zoom-in">Send Message</button>
+</form>
 
+<!-- Include EmailJS Script -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+    // Initialize EmailJS with your public key
+    (function() {
+        emailjs.init("2kWmZWDlgqbipEELd"); // Use your EmailJS Public Key here
+    })();
+
+    // Handle form submission
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+        
+        // Send form data to EmailJS
+        emailjs.sendForm("service_xn1x4hk", "template_dd67mff", this)
+            .then(function(response) {
+                alert("Message sent successfully!");
+            }, function(error) {
+                alert("Failed to send message. Please try again.");
+            });
+    });
+            </script>
+            </div>
+        </div>
     </section>
 
     
@@ -278,7 +243,7 @@
 
     <footer>
 
-        <p>&copy; 2025 Ntlhontlho Security & Training. All rights reserved.</p>
+        <p>&copy; 2025 Ntlhontlho Security & Training. All rights reserved | Designed by <a href="https://www.valoyitech.co.za/" target="_blank">Hector Baloyi</a></p>
 
     </footer>
 
