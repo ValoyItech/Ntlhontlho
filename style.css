@@ -1,0 +1,421 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #d32f2f;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-slide img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: fade 10s infinite alternate;
+}
+
+.hero-overlay {
+    position: absolute;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.company-name {
+    color: #d32f2f;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.hero-overlay h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.hero-overlay p {
+    font-size: 1.2rem;
+    margin: 10px 0 20px;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    background: #d32f2f;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #b71c1c;
+}
+
+/* Sections Common Styling */
+#services, #about, #contact {
+    padding: 60px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+#services h2, #contact h2, #about h2 {
+    margin-bottom: 20px;
+    color: #d32f2f;
+}
+
+/* Services Section */
+.services-image img {
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.services-image img:hover {
+    transform: scale(1.05);
+}
+
+/* About Section */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+    gap: 40px;
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+    min-width: 300px;
+}
+
+.highlight {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: auto;
+    gap: 20px;
+}
+
+.contact-details, .contact-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: flex-start;
+}
+
+.contact-label {
+    min-width: 120px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.contact-label img {
+    width: 24px;
+    height: auto;
+    margin-right: 8px;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.social-links img {
+    width: 40px;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #d32f2f;
+    color: white;
+}
+
+/* Animations */
+@keyframes fade {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        padding: 10px;
+        margin: 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hero {
+        height: 60vh;
+    }
+
+    .hero-overlay {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .services-image img {
+        width: 90%;
+    }
+
+    .about-container, .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text, .contact-details {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* Contact Section Styling */
+#contact {
+    padding: 40px;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+  }
+  
+  #contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Flex container for the two columns */
+  #contact .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Left Side: Contact Details */
+  #contact .contact-details {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px;
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  
+  /* Style for each paragraph in contact details */
+  #contact .contact-details p {
+    margin-bottom: 15px;
+  }
+  
+  /* Icon styling inside the contact details paragraphs */
+  #contact .contact-details p img {
+    width: 24px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+  
+  /* Social Media links styling */
+  #contact .social-links {
+    margin-top: 10px;
+  }
+  
+  #contact .social-links a {
+    margin-right: 10px;
+  }
+  
+  #contact .social-links img {
+    width: 24px;
+    height: auto;
+    vertical-align: middle;
+  }
+  
+  /* Right Side: Contact Form */
+  #contact .contact-right {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px;
+  }
+  
+  #contact .contact-right h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Contact Form Styling */
+  #contact #contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #contact #contact-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  #contact #contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  #contact #contact-form input,
+  #contact #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+  }
+  
+  #contact #contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  #contact #contact-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #contact #contact-form button:hover {
+    background-color: #0056b3;
+  }
+  
+
+  
